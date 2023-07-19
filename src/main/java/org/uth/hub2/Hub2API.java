@@ -28,4 +28,12 @@ public class Hub2API
   {
     return "{\"params\":\"" + param1 + "," + param2 + "\"}";
   }
+  
+  @GET
+  @Path("/test1")
+  @Produces(MediaType.TEXT_PLAIN)
+  public String getSimpleTest()
+  {
+    return "Simple Test for checking build change...";
+  }
 }

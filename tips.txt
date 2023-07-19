@@ -1,0 +1,11 @@
+# Building the JAR
+mvn clean package
+
+# Example indexing/search 
+java -classpath target/hub2-1.0.0-SNAPSHOT-runner.jar org.uth.hub2.tests.BookmarkFileToHubTest1 ~/Documents/bookmarks_13_07_2023.html ~/indices/hub2 openshift
+
+# Example hosted service/test
+curl "http://localhost:8080/hub2tests/hubindextest?filename=/Users/uther/Documents/bookmarks_13_07_2023.html&index=/Users/uther/indices/hub2&term=openshift"
+
+# Running a test from the Quarkus JAR:
+java -classpath target/hub2-1.0.0-SNAPSHOT-runner.jar org.uth.hub2.tests.FastFindTest1 
